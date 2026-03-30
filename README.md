@@ -1,16 +1,49 @@
-# React + Vite
+# LuxeNest - Premium Furniture & Home Decor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![LuxeNest](https://img.shields.io/badge/Status-Active-brightgreen)
+![React](https://img.shields.io/badge/React-19.0-61DBFB?logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-8.0-646CFF?logo=vite&logoColor=white)
 
-Currently, two official plugins are available:
+LuxeNest is a meticulously crafted e-commerce frontend application designed for high-end furniture and luxury home decor. It focuses on delivering a visually stunning, smooth, and highly responsive user experience through sleek aesthetics, premium imagery, and fluid animations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+- **Dynamic Theming**: Seamless light and dark mode integration designed using CSS Variables that swap colors out effortlessly. 
+- **Fluid Animations**: Page transitions, hover effects, and staggered scroll reveals powered by Framer Motion.
+- **Customized UI Architecture**: Built entirely with Vanilla CSS. A bespoke utility and styling class system tailored perfectly to the project with zero external CSS frameworks like Tailwind or Bootstrap.
+- **Fully Responsive**: Flawless interface logic scaling from ultrawide desktops down to mobile screens.
+- **Client-Side Routing**: Instantaneous navigation between pages via React Router v7.
 
-## React Compiler
+## 🚀 Tech Stack
+- **Framework**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Routing**: [React Router DOM v7](https://reactrouter.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 💻 Running Locally
 
-## Expanding the ESLint configuration
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/zainkp/LuxeNest.git
+   cd LuxeNest
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+## 🏗 Build for Production
+
+To create a highly optimized production bundle:
+```bash
+npm run build
+```
+
+## 📄 License
+This project is open-source and available under the MIT License.
