@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useSearchParams } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
-import { Filter, ChevronDown } from 'lucide-react';
+
 
 const Products = () => {
   const [searchParams] = useSearchParams();
@@ -59,16 +59,6 @@ const Products = () => {
                 {cat}
               </button>
             ))}
-          </div>
-          <div className="sort-dropdown flex gap-4">
-            <button className="flex items-center gap-2 text-sm text-gray-500 hover:text-black dark:hover:text-white transition-colors">
-              <Filter size={16} /> Filter
-            </button>
-            <div className="relative">
-              <button className="flex items-center gap-2 text-sm">
-                Sort By <ChevronDown size={16} />
-              </button>
-            </div>
           </div>
         </div>
 

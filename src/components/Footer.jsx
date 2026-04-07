@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 
 const InstagramIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -14,6 +16,8 @@ const TwitterIcon = () => (
 );
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+
   const handleScroll = () => {
     window.scrollTo(0, 0);
   };
@@ -57,10 +61,32 @@ const Footer = () => {
         <div className="footer-newsletter">
           <h4>Stay Updated</h4>
           <p>Subscribe to our newsletter for exclusive offers and design inspiration.</p>
-          <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
-            <input type="email" placeholder="Your email address" required />
-            <button type="submit" className="btn-primary">Subscribe</button>
-          </form>
+
+          <div className="relative mt-4">
+            <form
+              className="newsletter-form border-transparent focus-within:border-accent transition-colors rounded"
+              action={import.meta.env.VITE_CONVERTKIT_FORM_URL}
+              method="POST"
+            >
+              <input
+                type="email"
+                name="email_address"
+                placeholder="Your email address"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+
+              <button
+                type="submit"
+                className="btn-primary group relative overflow-hidden flex items-center justify-center min-w-[140px]"
+              >
+                <span className="relative z-10 transition-transform group-hover:scale-105">
+                  Submit
+                </span>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
       <div className="footer-bottom container">
